@@ -75,7 +75,18 @@ function isInViewport(elem) {
 */
 
 // build the nav
-
+function buildNavBar(){
+    createUnorderedList();
+    navigation.style.visibility = 'hidden';
+    let isScrolling;
+    window.addEventListener('scroll', function(evt){ // listening to the scroll event
+        navigation.style.visibility = 'visible';
+        window.clearTimeout(isScrolling); // clear timeout throughout scrolling
+        isScrolling = setTimeout(function(){ // set a timeout to run after scrolling
+            navigation.style.visibility = 'hidden';
+        }, 5000);
+    }, false);
+}
 
 // Add class 'active' to section when near top of viewport
 
