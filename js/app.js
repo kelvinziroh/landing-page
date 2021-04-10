@@ -124,5 +124,6 @@ function scrollSectionIntoView(evt){
 document.addEventListener('DOMContentLoaded', buildNavBar, false);
 
 // Scroll to section on link click
+navigation.addEventListener('click', scrollSectionIntoView, false);
 
 // Set sections as active
