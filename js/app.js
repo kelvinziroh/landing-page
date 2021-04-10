@@ -121,6 +121,7 @@ function scrollSectionIntoView(evt){
 */
 
 // Build menu 
+document.addEventListener('DOMContentLoaded', buildNavBar, false);
 
 // Scroll to section on link click
 
