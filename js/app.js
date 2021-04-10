@@ -52,6 +52,22 @@ function createUnorderedList(){
     }
     unorderedList.appendChild(listElementsFragment);
 }
+
+
+/**
+ * @description Checks if a section is in viewport
+ * @param {string} elem 
+ * @returns {boolean} Value of whether or not a section is in viewport
+ */
+function isInViewport(elem) {
+    const coordinates = elem.getBoundingClientRect();
+    return (
+        (coordinates.top >= -106 && coordinates.top <= 221) &&
+        coordinates.left >= 0 &&
+        coordinates.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        coordinates.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 /**
  * End Helper Functions
  * Begin Main Functions
