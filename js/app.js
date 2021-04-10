@@ -19,6 +19,7 @@
 */
 const sections = document.querySelectorAll('section'); 
 const navigation = document.querySelector('.page__header');
+const sectionIds = getElementIds(sections);
 
 /**
  * End Global Variables
@@ -26,6 +27,18 @@ const navigation = document.querySelector('.page__header');
  * 
 */
 
+/**
+ * @description Gets the IDs of an element
+ * @param {string} elements 
+ * @returns {object} Array of element IDs
+ */
+function getElementIds(elements){
+    elementIds = [];
+    for (element of elements){
+        elementIds.push(element.getAttribute('id')); 
+    }
+    return elementIds;
+}
 
 
 /**
