@@ -88,8 +88,17 @@ function buildNavBar(){
     }, false);
 }
 
-// Add class 'active' to section when near top of viewport
 
+// Add class 'active' to section when near top of viewport
+function toggleActiveSection(){
+    for (section of sections){
+        if (isInViewport(section)) {
+            section.classList.add('your-active-class');
+        } else {
+            section.classList.remove('your-active-class');
+        }
+    }
+}
 
 // Scroll to anchor ID using scrollTO event
 
