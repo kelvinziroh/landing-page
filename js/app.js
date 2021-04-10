@@ -127,3 +127,4 @@ document.addEventListener('DOMContentLoaded', buildNavBar, false);
 navigation.addEventListener('click', scrollSectionIntoView, false);
 
 // Set sections as active
+document.addEventListener('scroll', toggleActiveSection, false);
