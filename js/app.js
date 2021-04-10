@@ -17,7 +17,8 @@
  * Define Global Variables
  * 
 */
-
+const sections = document.querySelectorAll('section'); 
+const navigation = document.querySelector('.page__header');
 
 /**
  * End Global Variables
