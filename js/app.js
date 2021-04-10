@@ -41,6 +41,17 @@ function getElementIds(elements){
 }
 
 
+// Creates list items and appends them to unordered list element
+function createUnorderedList(){
+    const listElementsFragment = document.createDocumentFragment();
+    const unorderedList = document.getElementById('navbar__list');
+    for (sectionId of sectionIds){
+        const newListElement = document.createElement('li');
+        newListElement.innerHTML = `<a href='#${sectionId}' class='menu__link'>${sectionId}</a>`;
+        listElementsFragment.appendChild(newListElement);
+    }
+    unorderedList.appendChild(listElementsFragment);
+}
 /**
  * End Helper Functions
  * Begin Main Functions
