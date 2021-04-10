@@ -100,8 +100,19 @@ function toggleActiveSection(){
     }
 }
 
-// Scroll to anchor ID using scrollTO event
 
+// scrolls to the section clicked into viewport
+function scrollSectionIntoView(evt){
+    evt.preventDefault();
+    const targetElement = evt.target;
+    const htmlElement = document.querySelector('html');
+    htmlElement.style.cssText = 'scroll-behavior: smooth;';
+    for (sectionId of sectionIds){
+        if(sectionId === targetElement.textContent){
+            document.getElementById(sectionId).scrollIntoView(true);
+        }
+    }
+}
 
 /**
  * End Main Functions
