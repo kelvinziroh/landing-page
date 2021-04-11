@@ -22,14 +22,24 @@ body {
 /* Typeography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
-    font-size: 3em;
-    margin: 2em 1rem;
+    font-size: 2.5em;
+    margin: 2em 1rem 0.5em 1rem;
 }
+
+h3 {
+    margin: 1em 1rem;
+}
+
 
 @media only screen and (min-width: 35em){
     h1 {
-        font-size: 7em;
-        margin: 2em 4rem 1em;
+        font-size: 6.5em;
+        margin: 2em 4rem 0.2em;
+    }
+
+    h3 {
+        font-size: 3em;
+        margin: 1em 4rem 1em;
     }
 }
 
@@ -39,6 +49,7 @@ h2 {
     font-size: 3em;
     color: #fff;
 }
+
 
 p {
     line-height: 1.6em;
@@ -64,6 +75,10 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+.navbar__menu {
+    width: 80%;
+}
+
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
@@ -76,7 +91,7 @@ section {
 
 .navbar__menu .menu__link {
     display: block;
-    padding: 1em;
+    padding: 1.5em;
     font-weight: bold;
     text-decoration: none;
     color: #000;
@@ -95,7 +110,38 @@ section {
     top: 0;
     width: 100%;
     z-index: 5;
+    display: flex;
 }
+
+.page__header .logo{
+    font-size: 35px;
+    font-weight: bolder;
+    padding: 10px;
+    color: #000;
+    width: 20%;
+    flex-shrink: 2;
+}
+
+
+/* small screens */
+@media only screen and (max-width: 768px){
+    .page__header .logo {
+        font-size: 15px;
+    }
+
+    .navbar__menu ul {
+        display: flex;
+        text-align: right;
+        justify-content: space-evenly;
+    }
+
+    .navbar__menu .menu__link {
+        padding: 1.4em 1em;
+        font-size: 10px;
+    }
+}
+
+
 
 /* Footer Styles */
 .page__footer {
