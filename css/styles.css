@@ -175,6 +175,18 @@ section:nth-of-type(even) .landing__container {
     text-align: right; 
 }
 
+#scroll-button-container {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#scroll-button-container #scroll__button {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 3px;
+    border-style: none;
+}
+
 /* Background Circles */
 /* Note that background circles are created with psuedo elements before and after */
 /* Circles appear to be random do to use of :nth-of-type psuedo class */

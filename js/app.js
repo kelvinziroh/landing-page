@@ -114,6 +114,16 @@ function scrollSectionIntoView(evt){
     }
 }
 
+
+// scroll back to top of the page 
+function ScrollToTop(){
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+
 /**
  * End Main Functions
  * Begin Events
